@@ -74,10 +74,10 @@ const transformVerb = (verb) => {
 
   if (verb[verb.length - 1] === "e") {
     return `${verb}r`;
-  } else if (verb.length === 3 && last_letter != "y") {
-    return `${verb}${last_letter}er`;
+  } else if (verb.length === 3 && lastLetter != "y") {
+    return `${verb}${lastLetter}er`;
   } else if (needsDoubleConsonant(verb)) {
-    return `${verb}${last_letter}er`;
+    return `${verb}${lastLetter}er`;
   }
 
   return `${verb}er`;
