@@ -1,8 +1,25 @@
 const VOWELS = ["a", "e", "i", "o", "u", "y"];
 const wordContainer = document.getElementById("word");
 const clipboardToast = document.getElementById("clipboard-toast");
+const themeToggle = document.getElementById("theme-toggle");
 
 //TODO: add the y to ie rule
+
+/**
+ * toggles the theme of the page between gold and silver
+ * @returns {void}
+ */
+const toggleTheme = () => {
+  //get root element
+  const root = document.documentElement;
+  if (root.classList.contains("silver")) {
+    root.classList.remove("silver");
+    themeToggle.innerHTML = "silver";
+  } else {
+    root.classList.add("silver");
+    themeToggle.innerHTML = "gold";
+  }
+};
 
 /**
  * copies text from the word container to the clipboard

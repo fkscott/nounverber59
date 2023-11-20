@@ -1,6 +1,20 @@
+:root {
+  --background: #9c8a5b;
+  --foreground: #fefadc;
+  --link: #deecff;
+
+  --transition-duration: 0.15s ease-in-out;
+  --brightness: 1.1;
+}
+
+:root.silver {
+  --background: #aea8a8;
+  --foreground: #253237;
+  --link: #3a4d55;
+}
 body {
-  background-color: #9c8a5b;
-  color: #fefadc;
+  background-color: var(--background);
+  color: var(--foreground);
 
   font-family: "Playfair Display", serif;
   font-size: 1.2rem;
@@ -11,7 +25,7 @@ body {
   height: 95vh;
 }
 
-article {
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,26 +39,26 @@ article {
   cursor: pointer;
   padding: 1rem;
 
-  transition: backdrop-filter 0.15s ease-in-out;
+  transition: backdrop-filter var(--transition-duration);
 }
 #word:hover {
-  backdrop-filter: brightness(1.05);
+  backdrop-filter: brightness(var(--brightness));
 }
 
 #clipboard-toast {
   font-size: 1.3rem;
 
   opacity: 0;
-  transition: opacity 0.15s ease-in-out;
+  transition: opacity var(--transition-duration);
 }
 
 a {
-  color: #deecff;
-  transition: filter 0.15s ease-in-out;
+  color: var(--link);
+  transition: filter var(--transition-duration);
 }
 
 a:hover {
-  filter: brightness(1.5);
+  filter: brightness(var(--brightness));
 }
 
 footer {
