@@ -1,0 +1,51 @@
+body {
+  background-color: #9c8a5b;
+  height: 95vh;
+  font-family: "Playfair Display", serif;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  color: #fefadc;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+h1 {
+  font-size: 96px;
+}
+
+.stupid {
+  background-color: #221d23;
+  font-size: 24px;
+}
+
+a {
+  color: #deecff;
+  transition: filter 0.15s ease;
+}
+
+a:hover {
+  filter: brightness(1.5);
+}
+
+footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  h1 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  h1 {
+    font-size: 32px;
+  }
+}
