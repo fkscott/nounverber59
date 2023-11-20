@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-    <link href="styles.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <title>Noun Verber 59</title>
     <meta name="description" content="A random noun and verb generator to make band names like Starflyer59.">
@@ -17,21 +17,22 @@
 </head>
 
 <body>
-    <div class="container">
+    <article>
         <h1 id="word"></h1>
-    </div>
-    <script src="nouns.js"></script>
-    <script src="verbs.js"></script>
-    <script src="pronouncing.js"></script>
-    <script src="app.js"></script>
+        <p id="clipboard-toast">
+            copied to clipboard!
+        </p>
+        <a href="#" onclick="newWord()">generate another! &olarr;</a>
+    </article>
     <footer>
         <div>
-            <a href="#" onclick="new_word()">generate another! &olarr;</a> 
-        </div>
-        <div>
-            made with <span>&hearts;</span> by <a href="https://github.com/fkscott">keagan &nearr;</a> 
+            made with <span>&hearts;</span> by <a href="https://github.com/fkscott/nounverber59">keagan &nearr;</a>
         </div>
     </footer>
+    <script src="js/nouns.js"></script>
+    <script src="js/verbs.js"></script>
+    <script src="js/pronouncing.js"></script>
+    <script src="js/app.js"></script>
 </body>
 
 </html>

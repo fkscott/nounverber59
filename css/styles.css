@@ -1,0 +1,64 @@
+body {
+  background-color: #9c8a5b;
+  color: #fefadc;
+
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  height: 95vh;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+#word {
+  margin: 0; /* reset margin it does weird things in the flexbox */
+  font-size: 6rem;
+  cursor: pointer;
+  padding: 1rem;
+
+  transition: backdrop-filter 0.15s ease-in-out;
+}
+#word:hover {
+  backdrop-filter: brightness(1.05);
+}
+
+#clipboard-toast {
+  font-size: 1.3rem;
+
+  opacity: 0;
+  transition: opacity 0.15s ease-in-out;
+}
+
+a {
+  color: #deecff;
+  transition: filter 0.15s ease-in-out;
+}
+
+a:hover {
+  filter: brightness(1.5);
+}
+
+footer {
+  text-align: center;
+}
+
+@media screen and (max-width: 650px) {
+  #word {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  #word {
+    font-size: 2rem;
+  }
+}
